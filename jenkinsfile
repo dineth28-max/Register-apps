@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'jenkins-Agent' }
+    agent { label 'jenkins-agent' }
 
     tools {
         jdk 'java17'  // Changed from 'Java17' to 'java17' (lowercase)
