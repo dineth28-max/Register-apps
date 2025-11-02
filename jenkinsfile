@@ -1,9 +1,9 @@
 pipeline {
-    agent { label 'jenkins-agent' }
+    agent { label 'jenkins-agent' }  // ✅ matches your node name
 
     tools {
-        jdk 'java17'  // Changed from 'Java17' to 'java17' (lowercase)
-        maven 'Maven3'
+        jdk 'java17'      // ✅ must match JDK name under Manage Jenkins → Tools → JDK installations
+        maven 'Maven3'    // ✅ must match Maven tool name
     }
 
     stages {
@@ -30,6 +30,5 @@ pipeline {
                 sh "mvn test"
             }
         }
-    
     }
 }
