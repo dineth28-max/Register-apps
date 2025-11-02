@@ -2,7 +2,7 @@ pipeline {
     agent { label 'jenkins-Agent' }
 
     tools {
-       jdk 'java17' 
+        jdk 'java17'  // Changed from 'Java17' to 'java17' (lowercase)
         maven 'Maven3'
     }
 
@@ -30,5 +30,6 @@ pipeline {
                 sh "mvn test"
             }
         }
+    
     }
 }
